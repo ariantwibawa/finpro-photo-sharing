@@ -1,12 +1,12 @@
 import React from 'react'
 
 // Components.........
-import Stories from '../../components/stories/Stories'
+import TimelinePost from '../../components/timeline-post/timelinePost'
 
 export default function Home() {
   return (
     <>
-    <Stories/>
+    <TimelinePost/>
     </>
   )
 }

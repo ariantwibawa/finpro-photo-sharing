@@ -3,10 +3,11 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import ProtectedRoute from "../routes/ProtectedRoutes";
 
 // Pages...............
-import Login from "../pages/login/login";
+import Login from "../pages/login/Login";
 import Signup from "../pages/signup/Signup";
 import Home from "../pages/home/Home";
 import Profile from "../pages/profile/Profile";
+import User from "../pages/user/User";
 
 // Components........
 import Nav from "../components/nav/Nav";
@@ -39,17 +40,25 @@ export default function LayOut() {
         {
           path: "/",
           element: (
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Home />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           ),
         },
         {
           path: "/profile/:id",
           element: (
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Profile />
-            </ProtectedRoute>
+            // </ProtectedRoute>
+          ),
+        },
+        {
+          path: "/user/:id",
+          element: (
+            // <ProtectedRoute>
+              <User />
+            // </ProtectedRoute>
           ),
         },
       ],

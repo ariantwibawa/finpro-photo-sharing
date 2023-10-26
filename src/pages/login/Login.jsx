@@ -1,7 +1,18 @@
 import { Link } from 'react-router-dom';
+import useLogin from '../../hooks/useLogin';
 import './login.css'
 
 const Login = () => {
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    errLogin,
+    setErrLogin,
+    handleLogin,
+  } = useLogin();
+
   return (
     <div className="login">
         <div className="card">
@@ -15,13 +26,13 @@ const Login = () => {
         </p>
         <span>Don't Have An Account?</span>
         <Link to='/signup'>
-          <button className="btn btn-primary">Register</button>
+          <button className="btn btn-primary">Sign Up</button>
         </Link>
       </div>
       <form className="right">
-        <input type="text" required placeholder="username" />
-        <input type="password" required placeholder="password" />
-        <button type="submit" className='btn'>Login</button>
+        <input type="text" required placeholder="username" onChange={(e) => setEmail (e.target.value)} />
+        <input type="password" required placeholder="password" onChange={(e) => setPassword (e.target.value)}/>
+        <button type="submit" className='btn' onClick={handleLogin}>Login</button>
       </form>
     </div>
     </div>

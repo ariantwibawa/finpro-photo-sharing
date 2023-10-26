@@ -11,9 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faBell,
-  faEnvelope,
   faHome,
-  faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,10 +30,6 @@ export default function Nav() {
           <Link to="/profile/id">
             <FontAwesomeIcon icon={faUser} />
           </Link>
-          <div className="nav-searchbar">
-            <FontAwesomeIcon icon={faSearch} />
-            <input type="search" />
-          </div>
         </div>
 
     {/*..............................................NavAria Right...............................................*/}
